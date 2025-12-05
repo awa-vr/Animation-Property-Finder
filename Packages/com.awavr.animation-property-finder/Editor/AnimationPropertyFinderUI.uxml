@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" editor-extension-content="true">
+    <ui:VisualElement style="padding: 5px; flex-grow: 1;">
+        <ui:IMGUIContainer name="imgui-header-container" style="height: 85px;" />
+
+        <ui:VisualElement style="padding-bottom: 10px; padding-top: 5px;">
+            <editor:ObjectField label="Object" name="object-field" type="UnityEngine.Transform"
+                                allow-scene-objects="true" tooltip="Drag in an object to automatically set the name" />
+
+            <ui:DropdownField label="Property Preset" name="property-preset-dropdown" style="margin-bottom: 5px;" />
+
+            <ui:TextField label="Property Name" name="property-text-field" tooltip="Use '*' as a wildcard" />
+            <ui:Button name="search-button" text="Search" style="margin-top: 10px; height: 30px;" />
+        </ui:VisualElement>
+
+        <ui:Label name="status-label" text="Ready to search."
+                  style="padding-left: 5px; padding-bottom: 5px; -unity-font-style: bold;" />
+
+        <ui:MultiColumnListView name="results-list-view"
+                                show-alternating-row-backgrounds="All"
+                                fixed-item-height="20"
+                                style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>
